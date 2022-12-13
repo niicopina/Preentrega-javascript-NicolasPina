@@ -1,5 +1,5 @@
 
-/* const productos = [
+const productos = [
     {id: 1, nombre: "milanesa", precio: 1000},
     {id: 2, nombre: "pizza", precio: 1500},
     {id: 3, nombre: "tarta", precio: 700},
@@ -20,7 +20,7 @@ const buscar = (nombre) => {
     }
 };
 let nombre = prompt("ingrese el plato deseado")
-buscar(nombre); */
+buscar(nombre);
 
 
 
