@@ -1,9 +1,9 @@
 
 const productos = [
-    {id: 1, nombre: "milanesa", precio: 1000},
-    {id: 2, nombre: "pizza", precio: 1500},
-    {id: 3, nombre: "tarta", precio: 700},
-    {id: 4, nombre: "hamburguesa", precio: 1200},
+    {id: 1, nombre: "clasico", precio: 5000},
+    {id: 2, nombre: "despertar dulce", precio: 4500},
+    {id: 3, nombre: "mix cumpleañitos", precio: 5700},
+    {id: 4, nombre: "festivos", precio: 5200},
  ];
 
 const buscar = (nombre) => {
@@ -13,15 +13,37 @@ const buscar = (nombre) => {
         id: ${producto.id}
         Nombre: ${producto.nombre}
         Precio: ${producto.precio} `;
-
         alert(mensaje);
-    }else{
+    } else{
         alert("producto no encontrado");
-    }
-};
-let nombre = prompt("ingrese el plato deseado")
+        
+      }  
+    };
+let nombre = prompt("ingrese el desayuno deseado entre Clasico, Despertar dulce, Mixcumpleañitos, Festivos")
 buscar(nombre);
 
 
+
+let cantidad = parseInt(prompt("defina la cantidad a comprar"));
+const totales = productos.map((item) =>{
+    return {
+        nombre: producto.nombre,
+        total: producto.precio * cantidad
+    }
+});
+
+
+// ----------------------------- Eventos -------------------------------------------
+
+let btn = document.getElementById("btn");
+
+/* function ejecutar(){
+    console.log("click en el boton");
+} */
+const ejecutar = () => {
+    console.log("click en el boton");
+}
+//btn.addEventListener("click", ejecutar); ------------> primera forma
+btn.onclick = ejecutar;
 
 
