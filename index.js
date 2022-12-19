@@ -20,29 +20,30 @@ const buscar = (nombre) => {
             producto = prompt("producto no encontrado, intente nuevamente");
             
         }
-    };
-let nombre = prompt("ingrese el desayuno deseado entre Clasico, Despertar dulce, Mixcumpleañitos, Festivos")
-buscar(nombre);
-
-
-
+/* let nombre = prompt("ingrese el desayuno deseado entre Clasico, Despertar dulce, Mixcumpleañitos, Festivos")
+buscar(nombre); */
 
 let cantidad = parseInt(prompt("defina la cantidad a comprar"));
-const totales = productos.map(item => {
+let total = producto.precio * cantidad;
+alert(total);}
+
+
+
+/* const totales = productos.map(item => {
     return {
         nombre: item.nombre,
         precio: item.precio * cantidad
     };
-});
+}); */
 
-productos.forEach(producto => {
+/* productos.forEach(producto => {
     let div = document.createElement("div");
     div.innerHTML = ` 
     <h2>ID: ${producto.id}</h2>
     <h3>Nombre: ${producto.nombre}</h3>
     <h4>Precio: ${producto.precio}</h4>`;
     contenedor.append(div);
-});
+}); */
 
 
 
