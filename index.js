@@ -18,7 +18,9 @@ if (producto){
             alert(mensaje);}else if
                 (producto == "");alert("no aplica");
                 
-            
+                let cantidad = parseInt(prompt("defina la cantidad a comprar"));
+                let total = producto.precio * cantidad;
+                alert(total); 
             
 
 
@@ -44,9 +46,9 @@ if (producto){
         
 
 
-let cantidad = parseInt(prompt("defina la cantidad a comprar"));
+/* let cantidad = parseInt(prompt("defina la cantidad a comprar"));
         let total = producto.precio * cantidad;
-        alert(total);
+        alert(total); */
 
 /* const totales = productos.map(item => {
     return {
@@ -66,7 +68,7 @@ let cantidad = parseInt(prompt("defina la cantidad a comprar"));
 
 //Eventos
 
-//let btn = document.getElementById("btn");
+let btn = document.getElementById("btn");
 
 /* function ejecutar(){
     console.log("click en el boton");
@@ -77,6 +79,6 @@ let cantidad = parseInt(prompt("defina la cantidad a comprar"));
 //btn.addEventListener("click", ejecutar); ------------> primera forma
 //btn.onclick = () =>{console.log("respuesta 2")}
 
-//boton.addEventListener("click", () => ejecutar("hey"));
+boton.addEventListener("click", () => ejecutar("hey"));
 
 
