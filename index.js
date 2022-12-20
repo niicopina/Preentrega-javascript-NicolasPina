@@ -45,5 +45,19 @@ alert(total);}
     contenedor.append(div);
 }); */
 
+//Eventos
+
+let btn = document.getElementById("btn");
+
+/* function ejecutar(){
+    console.log("click en el boton");
+} */
+const ejecutar = () => {
+    console.log("click en el boton");
+}
+//btn.addEventListener("click", ejecutar); ------------> primera forma
+//btn.onclick = ejecutar;------------------------------> segunda forma
+
+boton.addEventListener("click", () => ejecutar("hey"));
 
 
