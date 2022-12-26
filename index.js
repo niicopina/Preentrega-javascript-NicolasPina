@@ -6,56 +6,29 @@ const productos = [
     {id: 4, nombre: "festivos", precio: 6200},
  ];
 
-let nombre = prompt("ingrese el desayuno deseado entre Clasico, Despertar dulce, Mix cumpleañitos, Festivos");
+let btn = document.getElementById("btn");
+btn.addEventListener("click", respuestaClick)
 
-let producto = productos.find(item => item.nombre === nombre);
-if (producto){
-    let mensaje = `
-            Id: ${producto.id}
-            Nombre: ${producto.nombre}
-            Precio: ${producto.precio}
-            `;
-            alert(mensaje);}else if
-                (producto == "");alert("no aplica");
-                
-                let cantidad = parseInt(prompt("defina la cantidad a comprar"));
-                let total = producto.precio * cantidad;
-                alert(total); 
-            
+function respuestaClick() {
+    let nombre = prompt("ingrese el desayuno deseado entre Clasico, Despertar dulce, Mix cumpleañitos, Festivos");
 
-
-     /* const buscar = (nombre) => {
     let producto = productos.find(item => item.nombre === nombre);
     if (producto){
         let mensaje = `
-        id: ${producto.id}
-        Nombre: ${producto.nombre}
-        Precio: ${producto.precio} `;
-        alert(mensaje);
-            }else if(producto === false);
-        alert("producto no encontrado");
-            }; */
-            /* let cantidad = productos.find(item => (item.precio + cantidad) === precio);
-            if (cantidad){
-                let mensaje = `
-                Total: ${cantidad.precio}`;
-                alert(mensaje);
-            }; */
-
-//let  = prompt("ingrese el desayuno deseado entre Clasico, Despertar dulce, Mixcumpleañitos, Festivos");
-        
+                Id: ${producto.id}
+                Nombre: ${producto.nombre}
+                Precio: ${producto.precio}
+                `;
+                alert(mensaje);}else if
+                    (producto == "");alert("no aplica");
+                    
+                    let cantidad = parseInt(prompt("defina la cantidad a comprar"));
+                    let total = producto.precio * cantidad;
+                    alert(total); 
 
 
-/* let cantidad = parseInt(prompt("defina la cantidad a comprar"));
-        let total = producto.precio * cantidad;
-        alert(total); */
+}
 
-/* const totales = productos.map(item => {
-    return {
-        nombre: item.nombre,
-        precio: item.precio * cantidad
-    };
-});
 
 /* productos.forEach(producto => {
     let div = document.createElement("div");
@@ -68,7 +41,7 @@ if (producto){
 
 //Eventos
 
-let btn = document.getElementById("btn");
+/* let btn = document.getElementById("btn"); */
 
 /* function ejecutar(){
     console.log("click en el boton");
@@ -79,6 +52,6 @@ let btn = document.getElementById("btn");
 //btn.addEventListener("click", ejecutar); ------------> primera forma
 //btn.onclick = () =>{console.log("respuesta 2")}
 
-boton.addEventListener("click", () => ejecutar("hey"));
+/* boton.addEventListener("click", () => ejecutar("hey")); */
 
 

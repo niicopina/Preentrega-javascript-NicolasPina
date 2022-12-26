@@ -9,7 +9,7 @@
 }
 :root{
     --text-color: #302e29;
-    --main-color: #ff9100;
+    --main-color: #ff3c00;
     --second-color: #858585;
     --big-font: 4.5rem;
     --h2-font: 2.6rem;
@@ -35,9 +35,9 @@ header{
 
 }
 .logo{
-    font-size: 30px;
-    font-weight: 700;
-    color: var(--text-color);
+    background: url(../img/logo.jpg);
+    
+    
 
 }
 span{
@@ -122,6 +122,47 @@ section{
 .btn:hover{
     letter-spacing: 1px;
 }
+.img-cont{
+    width: 30%;
+    height: 40%;
+}
 
+.main-text h2{
+    font-size: var(--h2-font);
+    margin-bottom: 10px;
+
+}
+.main-text p{
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--second-color);
+    line-height: 32px;
+}
+.container-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 2rem;
+    align-items: center;
+    margin-top: 4rem;
+}
+.c-mainbx{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+    border-radius: 10px;
+    height: 90px;
+    background: var(--bg-color);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    transition: all .38s ease;
+}
+.container-text{
+    font-size: var(--p-font);
+    font-weight: 500;
+}
+.c-mainbx:hover{
+    transform: translateX(10px);
+    cursor: pointer;
+}
 
 
