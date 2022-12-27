@@ -1,12 +1,20 @@
 //let contenedor = document.getElementById("contenedor1");
-const productos = [
-    {id: 1, nombre: "clasico", precio: 5000},
-    {id: 2, nombre: "despertar dulce", precio: 4500},
-    {id: 3, nombre: "mix cumpleañitos", precio: 3700},
-    {id: 4, nombre: "festivos", precio: 6200},
+/* const productos = [
+    {id: 1, nombre: "Pan Dulce", precio: 5000},
+    {id: 2, nombre: "Tiramisu", precio: 4500},
+    {id: 3, nombre: "Torta Footbol", precio: 3700},
+    {id: 4, nombre: "Cheescakes", precio: 6200},
  ];
 
-let btn = document.getElementById("btn");
+
+
+function agregarProducto(){
+}
+document.getElementById("btn").onclick = function (){
+    agregarProducto();
+} */
+
+/* let btn = document.getElementById("btn");
 btn.addEventListener("click", respuestaClick)
 
 function respuestaClick() {
@@ -27,7 +35,7 @@ function respuestaClick() {
                     alert(total); 
 
 
-}
+} */
 
 let menu = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
