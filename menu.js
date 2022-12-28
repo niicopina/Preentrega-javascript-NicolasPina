@@ -1,18 +1,22 @@
+const cards = document.getElementById('cards')
 const items = document.getElementById('items')
+const footer = document.getElementById('footer')
 const templateCard = document.getElementById('template-card').content
+const templateFooter = document.getElementById('template-footer').content
+const templateCarrito = document.getElementById('template-carrito').content
 const fragment = document.createDocumentFragment()
 let carrito = {}
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchData()
 })
-items.addEventListener('click', e => {
+cards.addEventListener('click', e => {
     addCarrito(e)
 })
 const fetchData = async () => {
     try {
         const res = await fetch('api.json')
-        const data = awaut res.json()
+        const data = await res.json()
         //console.log(data);
         pintarCards(data)
     } catch (error) {
@@ -28,7 +32,7 @@ const pintarCards = data => {
         const clone = templateCard.cloneNode(true)
         fragment.appendChild(clone)
     })
-    items.appendChild(fragment)
+    cards.appendChild(fragment)
 }
 const addCarrito = e => {
     //console.log(e.target.classList.contains('btn-dark'));
