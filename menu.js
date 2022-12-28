@@ -1,25 +1,21 @@
-const lista = document.getElementById('lista')
-
-const arrayItem = ['item 1', 'item 2', 'item 3']
-
-const fragment = document.createDocumentFragment()
-
-arrayItem.forEach(item => {
-    const li = document.createElement('li')
-    li.classList.add('list')
-    const b = document.createElement('b')
-    b.textContent = 'Nombre:'
-    li.appendChild(b)
-    const span = document.createElement('span')
-    span.classList.add('text-danger')
-    span.textContent = itemli.appendChild(b)
-    li.appendChild(span)
+const lista = document.getElementById('items')
+const templateCard = document.getElementById('template-card').content
+document.addEventListener('DOMContentLoaded', () => {
+    fetchData()
 })
-lista.appendChild(fragment)
+const fetchData = async () => {
+    try {
+        const res = await fetch('api.json')
+        const data = awaut res.json()
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 
 
-
+const pintarCards =
 
 
 
@@ -30,7 +26,14 @@ lista.appendChild(fragment)
     {id: 4, nombre: "Cheescakes", precio: 6200},
  ];
 
-
+const template = document.querySelector('#template-list').content
+const fragment = document.createDocumentFragment()
+arrayLista.forEach(item => {
+    template.querySelector('.list span').textContent = item
+    const clone = template.cloneNode(true)
+    fragment.appendChild(clone)
+})
+lista.appendChild(fragment)
 
 function agregarProducto(){
 }
