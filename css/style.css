@@ -188,8 +188,9 @@ section{
     margin-bottom: 2.3rem;
 }
 .menu-content{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    /* flex-direction: column; */
+    grid-template-columns: repeat(2, 2);
     gap: 2rem;
     align-items: center;
     margin-top: 4rem;
@@ -197,7 +198,7 @@ section{
 }
 
 .row-img{
-    width: 40%;
+    width: 20%;
     height: auto;
     border-radius: 10px;
 }

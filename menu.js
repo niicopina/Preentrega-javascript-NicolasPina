@@ -20,11 +20,15 @@ items.addEventListener('click', e => { btnAumentarDisminuir(e) })
 
 // Traer productos
 const fetchData = async () => {
+    try {
     const res = await fetch('api.json');
     const data = await res.json()
     // console.log(data)
     pintarCards(data)
-}
+    } catch (error){
+    console.log(error);
+    }
+};
 
 // Pintar productos
 const pintarCards = data => {
@@ -32,6 +36,7 @@ const pintarCards = data => {
         templateCard.querySelector('h5').textContent = item.title
         templateCard.querySelector('p').textContent = item.precio
         templateCard.querySelector('button').dataset.id = item.id
+        templateCard.querySelector('img').setAttribute("src", item.thumbnailUrl)
         const clone = templateCard.cloneNode(true)
         fragment.appendChild(clone)
     })
