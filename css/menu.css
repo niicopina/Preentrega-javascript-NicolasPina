@@ -124,3 +124,14 @@ section{
     display: flex;
     flex-direction: row;
 }
+.container {
+    border: groove;
+    border-top: 20px;
+}
+h4 {
+    color: #ff3c00;
+}
+#cards {
+    display: grid;
+    grid-template-columns: 700px 700px 600px;
+}

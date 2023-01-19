@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', e => {
         pintarCarrito()
     }
 });
-cards.addEventListener('click', e => { addCarrito(e) });
+cards.addEventListener('click', e => { addCarrito(e)})
+
 items.addEventListener('click', e => { btnAumentarDisminuir(e) })
 
 // Traer productos
@@ -45,6 +46,7 @@ const pintarCards = data => {
 
 // Agregar al carrito
 const addCarrito = e => {
+    
     if (e.target.classList.contains('btn-dark')) {
         // console.log(e.target.dataset.id)
         // console.log(e.target.parentElement)
@@ -98,7 +100,7 @@ const pintarFooter = () => {
     
     if (Object.keys(carrito).length === 0) {
         footer.innerHTML = `
-        <th scope="row" colspan="5">Carrito vacío con innerHTML</th>
+        <th scope="row" colspan="5">Carrito vacío comience a comprar!</th>
         `
         return
     }
